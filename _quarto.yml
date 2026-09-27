@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "LatinGenomes"
+  description: "The Latin American Alliance for Genomic Diversity: a pangenome and structural-variant catalog built from Indigenous and admixed ancestries across Latin America."
+  site-url: "https://latingenomes.org"          # TODO: set your real domain
+  repo-url: "https://github.com/YOUR-ORG/latingenomes-site"   # TODO
+  favicon: assets/logo.svg
+  search: true
+  page-navigation: true
+  back-to-top-navigation: true
+  open-graph: true
+  navbar:
+    logo: assets/logo.svg
+    title: "LatinGenomes"
+    left:
+      - text: "Research"
+        href: research.qmd
+      - text: "Cohorts"
+        href: cohorts.qmd
+      - text: "Data"
+        href: data.qmd
+      - text: "Timeline"
+        href: timeline.qmd
+      - text: "Training"
+        href: training.qmd
+      - text: "Team"
+        href: team.qmd
+      - text: "News"
+        href: news/index.qmd
+    right:
+      - icon: github
+        href: "https://github.com/YOUR-ORG"     # TODO
+        aria-label: GitHub
+  page-footer:
+    left: |
+      LatinGenomes: The Latin American Alliance for Genomic Diversity
+    right: |
+      Built with [Quarto](https://quarto.org). Content licensed CC BY 4.0.
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles/light.scss]
+      dark: [cosmo, styles/dark.scss]
+    respect-user-color-scheme: true
+    css: styles/extra.css
+    toc: true
+    toc-location: right
+    toc-title: "On this page"
+    fig-cap-location: bottom
+    link-external-newwindow: true
+    smooth-scroll: true
+    code-tools: false
+    echo: false
+    mermaid:
+      theme: neutral

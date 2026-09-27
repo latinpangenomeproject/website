@@ -1,0 +1,28 @@
+---
+title: "Training and community"
+subtitle: "Building genomic capacity where the samples come from"
+---
+
+## Workshops
+
+With [CABANAnet](https://cabana.network/), a bioinformatics training network across Latin America, LatinGenomes will co-organize five hands-on workshops, one each year, in Costa Rica and other participating countries. Workshops cover computational pipelines for whole-genome and single-cell RNA sequencing analysis, so that every site can run the analyses, not only the largest ones.
+
+<!-- TODO: replace with real dates, venues and application links -->
+| Year | Focus | Location | Status |
+|:-----|:------|:---------|:-------|
+| 1 | Long-read WGS and SV calling | Costa Rica | Planned |
+| 2 | Pangenome graphs | To be announced | Planned |
+| 3 | Single-cell RNA-seq and eQTL mapping | To be announced | Planned |
+| 4 | Cancer genomics and somatic SVs | To be announced | Planned |
+| 5 | Integrative analysis and data reuse | To be announced | Planned |
+
+Past LatinCells courses are listed at [latincells.org](https://www.latincells.org/en/cursos).
+
+## Working with communities
+
+Workshops also serve as meetings with local communities to share progress, as LatinCells has done before. Between them, in-person and remote consultations gather feedback from participants and other stakeholders, and that feedback shapes how results are reported in scientific articles and in the media.
+
+::: {.callout-tip appearance="simple"}
+## Are you a participant or community representative?
+You can ask about the project, how your samples are used, or request a visit. Write to [contact@latingenomes.org](mailto:contact@latingenomes.org). <!-- TODO: real address -->
+:::

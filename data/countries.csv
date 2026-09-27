@@ -1,0 +1,10 @@
+country,atlas_name,lat,lon,color
+United States,United States of America,28.5,-81.5,#8A94A6
+Mexico,Mexico,23.6,-102.5,#D6423B
+Costa Rica,Costa Rica,9.9,-84.1,#F2A71B
+Colombia,Colombia,4.6,-74.1,#EFD02C
+Peru,Peru,-9.2,-75.0,#B8862B
+Brazil,Brazil,-12.0,-50.0,#8CC152
+Chile,Chile,-33.5,-70.7,#3A78C9
+Uruguay,Uruguay,-32.6,-55.9,#6B3FA0
+Argentina,Argentina,-40.0,-64.5,#9DC3E6

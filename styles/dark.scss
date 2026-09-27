@@ -1,0 +1,40 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap');
+
+$ink:      #0E1A2E;
+$text:     #E6ECF3;
+$andes:    #8DB6E3;
+$maize:    #F0C055;
+$highland: #7CC39A;
+
+$body-bg: $ink;
+$body-color: $text;
+$primary: $andes;
+$secondary: $highland;
+$warning: $maize;
+$link-color: $andes;
+
+$navbar-bg: #0A1424;
+$navbar-fg: #E6ECF3;
+$navbar-hl: $maize;
+$footer-bg: #0A1424;
+$footer-fg: #A9B6C6;
+
+$font-family-sans-serif: "Literata", Georgia, "Times New Roman", serif;
+$headings-font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 600;
+$font-size-root: 17px;
+$line-height-base: 1.65;
+$border-radius: 6px;
+$border-color: #24344D;
+
+/*-- scss:rules --*/
+h1, .h1 { font-weight: 800; letter-spacing: -0.02em; }
+h2, .h2 { letter-spacing: -0.01em; margin-top: 2.4rem; }
+.navbar-title, .navbar .nav-link { font-family: $headings-font-family; }
+.navbar .nav-link { font-weight: 600; }
+.quarto-title .title { font-weight: 800; }
+p, li { max-width: 72ch; }
+figure figcaption, .figure-caption { font-size: 0.88rem; line-height: 1.5; opacity: 0.8; }
+// Figures from the proposal are on white; give them a light mat in dark mode
+.figure img, figure img { background: #fff; padding: 6px; border-radius: 4px; }

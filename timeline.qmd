@@ -1,0 +1,67 @@
+---
+title: "Timeline"
+subtitle: "Five years, from sequencing to flagship publications"
+---
+
+```{ojs}
+//| echo: false
+activities = [
+  {task: "Funding, subcontracts, advisory committee", stream: "Management", start: 0, end: 0.5},
+  {task: "Sample selection and long-read sequencing", stream: "Maps", start: 0, end: 1},
+  {task: "Pangenome assembly and SV discovery", stream: "Maps", start: 1, end: 2},
+  {task: "SV and gene expression integration", stream: "Mechanisms", start: 1.5, end: 3},
+  {task: "Gallbladder cancer recruitment", stream: "Medicine", start: 1, end: 3},
+  {task: "Gallbladder scRNA-seq and long-read WGS", stream: "Medicine", start: 2, end: 4},
+  {task: "Germline and somatic SVs in gallbladder cancer", stream: "Medicine", start: 3, end: 5},
+  {task: "Web portal build and maintenance", stream: "Capacity", start: 2.5, end: 5},
+  {task: "Community engagement and dissemination", stream: "Capacity", start: 0, end: 5}
+]
+workshops = [0.5, 1.5, 2.5, 3.5, 4.5].map(x => ({x, task: "CABANAnet training workshops"}))
+papers = [
+  {x: 2.75, task: "Flagship publications", label: "LatinPangenome"},
+  {x: 4.75, task: "Flagship publications", label: "SVs and expression"}
+]
+order = [...activities.map(d => d.task), "CABANAnet training workshops", "Flagship publications"]
+```
+
+::: {.ojs-scroll}
+```{ojs}
+//| echo: false
+Plot.plot({
+  width: Math.max(width, 720),
+  height: 440,
+  marginLeft: 300,
+  x: {domain: [0, 5], ticks: [0.5, 1.5, 2.5, 3.5, 4.5], tickFormat: d => `Year ${d + 0.5}`, label: null, axis: "top"},
+  y: {domain: order, label: null, padding: 0.3},
+  color: {
+    domain: ["Management", "Maps", "Mechanisms", "Medicine", "Capacity"],
+    range: ["#8A94A6", "#2F5D8A", "#3E7F5A", "#B8862B", "#E3A92B"],
+    legend: true
+  },
+  marks: [
+    Plot.gridX([1, 2, 3, 4], {stroke: "currentColor", strokeOpacity: 0.15}),
+    Plot.barX(activities, {x1: "start", x2: "end", y: "task", fill: "stream", rx: 4,
+      title: d => `${d.task}\n${d.stream}`}),
+    Plot.dot(workshops, {x: "x", y: "task", r: 7, fill: "#E3A92B", stroke: "currentColor",
+      title: d => `Workshop, year ${d.x + 0.5}`}),
+    Plot.dot(papers, {x: "x", y: "task", r: 9, symbol: "star", fill: "#D6423B",
+      title: d => d.label}),
+    Plot.text(papers, {x: "x", y: "task", text: "label", dy: -14, fontSize: 11, fill: "currentColor"})
+  ]
+})
+```
+:::
+
+## Where the work happens
+
+**Year 1.** Long-read sequencing completed and structural variants identified, combining capacity at the Broad Institute, Mexico and Uruguay.
+
+**Year 2.** Reference pangenome graphs constructed, with curation and storage led by Uruguay. Gallbladder cancer recruitment begins in Chile.
+
+**Years 2–3.** Structural variants integrated with LatinCells single-cell data in Mexico, with differential expression analyses.
+
+**Years 3–4.** Long-read WGS and single-cell RNA from gallbladder samples generated in Chile, where 10x library construction is already in place.
+
+**Year 5.** Germline and somatic structural variants associated with gallbladder cancer identified.
+
+Community engagement, training and dissemination run through all five years at every site.

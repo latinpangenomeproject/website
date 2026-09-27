@@ -1,0 +1,10 @@
+---
+title: "LatinGenomes launches its website"
+description: "A home for the Latin American pangenome, cohort information, and upcoming data releases."
+date: 2026-09-25
+categories: [announcements]
+---
+
+This site will host project updates, workshop announcements and, as they are released, the LatinPangenome graphs and the structural variant eQTL database.
+
+<!-- To add a post: copy this folder, rename it (e.g. 2026-10-workshop), and edit the title, date and text. -->

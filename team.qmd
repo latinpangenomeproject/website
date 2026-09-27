@@ -1,0 +1,24 @@
+---
+title: "Team"
+subtitle: "Cohort leads and collaborators across the consortium"
+---
+
+LatinGenomes is led by Andrés Moreno-Estrada and brings together more than 30 researchers leading genomic projects across Latin America and the United States. Colors match each country on the [cohort map](cohorts.qmd).
+
+<!-- TODO: add photos, affiliations and links. A Quarto "about" or listing page with one .qmd per person works well once the list grows. -->
+
+```{=html}
+<div class="team-country" style="--k:var(--c-mexico)"><h3>Mexico</h3><p>Andrés Moreno-Estrada, Lourdes García, Carlos Ortiz, Daniela Robles</p></div>
+<div class="team-country" style="--k:var(--c-usa)"><h3>United States</h3><p>Hugo Guerrero Cázares</p></div>
+<div class="team-country" style="--k:var(--c-costarica)"><h3>Costa Rica</h3><p>Alejandro Leal, Henriette Raventós, Gabriela Chavarría, Rebeca Campos (CABANAnet)</p></div>
+<div class="team-country" style="--k:var(--c-colombia)"><h3>Colombia</h3><p>Guillermo Barreto, Marisol Espitia</p></div>
+<div class="team-country" style="--k:var(--c-peru)"><h3>Peru</h3><p>Carla Gallo, Giovanni Poletti, Omar Cáceres, César Sánchez, Carlos Padilla</p></div>
+<div class="team-country" style="--k:var(--c-brazil)"><h3>Brazil</h3><p>Tábita Hünemeier, Lygia da Veiga Pereira, Patricia Severino, Patricia Possik</p></div>
+<div class="team-country" style="--k:var(--c-chile)"><h3>Chile</h3><p>Ricardo Verdugo, Alicia Colombo, Mauricio Moraga, Vinicius Maracaja, Juan C. Araya, Marcelo Fonseca</p></div>
+<div class="team-country" style="--k:var(--c-uruguay)"><h3>Uruguay</h3><p>Lucía Spangenberg, Hugo Naya, Inés Fariello</p></div>
+<div class="team-country" style="--k:var(--c-argentina)"><h3>Argentina</h3><p>Claudio Bravi, Hernán Dopazo, María Laura Parolin</p></div>
+```
+
+## Partners
+
+[PacBio](https://www.pacb.com/) (long-read sequencing), [LatinCells](https://www.latincells.org), funded by the Chan Zuckerberg Initiative (single-cell profiling), and [CABANAnet](https://cabana.network/) (training)
