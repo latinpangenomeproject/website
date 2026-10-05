@@ -1,5 +1,5 @@
 ---
-pagetitle: "LatinGenomes | A pangenome for Latin America"
+pagetitle: "Latin Pangenomes Project"
 toc: false
 page-layout: article
 listing:
