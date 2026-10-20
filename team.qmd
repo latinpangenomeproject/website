@@ -19,4 +19,4 @@ The Latin Pangenomes Project brings together more than 30 researchers leading ge
 
 ## Partners
 
-[PacBio](https://www.pacb.com/) (long-read sequencing), [Broad Institute](https://www.broadinstitute.org/), [Novo Nordisk Foundation](https://novonordiskfonden.dk/en/), [LatinCells](https://www.latincells.org), funded by the Chan Zuckerberg Initiative (single-cell profiling), and [CABANAnet](https://cabana.network/) (training)
+[PacBio](https://www.pacb.com/), [Broad Institute](https://www.broadinstitute.org/), [Novo Nordisk Foundation](https://novonordiskfonden.dk/en/), [LatinCells](https://www.latincells.org), and [CABANAnet](https://cabana.network/).
