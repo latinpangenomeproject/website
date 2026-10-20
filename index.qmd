@@ -90,10 +90,11 @@ Countries contributing long-read genomes to the LatinPangenome. Positions mark t
     <p>Study germline and somatic structural variants in gallbladder cancer among Chilean patients of Mapuche ancestry, the population with the highest burden worldwide.</p>
     <a class="more" href="research.qmd#medicine">About the gallbladder study</a>
   </div>
-</div>
-<div class="foundation">
-  <h3>Aim 4: Local capacity, local leadership</h3>
-  <p>Sequencing, analysis and data stewardship happen in Latin America, with yearly hands-on workshops run with CABANAnet.</p>
+  <div class="stage">
+    <div class="aim">Aim 4</div>
+    <h3>Local capacity, local leadership</h3>
+    <p>Sequencing, analysis and data stewardship happen in Latin America, with yearly hands-on workshops run with CABANAnet.</p>
+  </div>
 </div>
 ```
 
