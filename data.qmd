@@ -1,0 +1,56 @@
+---
+title: "Data"
+subtitle: "What we will share, where, and how to request access"
+---
+
+::: {.callout-important appearance="simple"}
+## The data portal is not live yet
+Pangenome graphs and the SV-eQTL database will be released here as they pass quality control. [Follow the news](news/index.qmd) for release announcements.
+:::
+
+Data from the project goes to three places, depending on what it is and how identifiable it is.
+
+```{mermaid}
+%%| fig-cap: "Data sharing strategy. Summary-level resources are public; individual-level sequences are available through controlled access."
+flowchart LR
+  subgraph Data
+    A[LatinPangenome graph]
+    B[SV-eQTL and SNP-eQTL database]
+    C[Single-cell gene counts]
+    D[Individual-level genomes]
+  end
+  subgraph Host
+    P[LatinGenomes web portal]
+    Z[CZ CELLxGENE]
+    E[European Genome-phenome Archive]
+  end
+  U[Your computer]
+  A --> P
+  B --> P
+  C --> Z
+  D --> E
+  P -- open --> U
+  Z -- open --> U
+  E -- approved by the DAC --> U
+```
+
+## Open resources
+
+**LatinPangenome graph and SV catalog.** Graph files and variant calls, downloadable from this site with documentation and versioning.
+
+**eQTL database.** Browsable and downloadable associations for structural variants and SNPs across 29 cell types.
+
+**Single-cell expression.** Gene count matrices through [CZ CELLxGENE](https://cellxgene.cziscience.com/), maintained by the Chan Zuckerberg Initiative.
+
+## Controlled access
+
+Individual-level whole-genome sequences will be deposited in the [European Genome-phenome Archive](https://ega-archive.org/). Researchers apply through EGA, and requests are reviewed by a Data Access Committee of LatinGenomes researchers. The committee's role is to make sure uses are consistent with the consent participants gave and with the expectations of their communities.
+
+<!-- TODO: add the EGA study and dataset accessions (EGAS…/EGAD…) once issued -->
+
+## How to cite
+
+<!-- TODO: replace with the flagship publication once available -->
+Until the flagship paper is published, please cite the resource as:
+
+> LatinGenomes Consortium. *LatinPangenome: a Latin American pangenome reference.* https://latingenomes.org

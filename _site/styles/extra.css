@@ -1,0 +1,109 @@
+/* Country colors follow Figure 1 of the proposal, so the same country
+   keeps the same color on every page (band, map, tables, team). */
+:root {
+  --c-usa: #8A94A6;
+  --c-mexico: #D6423B;
+  --c-costarica: #F2A71B;
+  --c-colombia: #EFD02C;
+  --c-peru: #B8862B;
+  --c-brazil: #8CC152;
+  --c-chile: #3A78C9;
+  --c-uruguay: #6B3FA0;
+  --c-argentina: #9DC3E6;
+  --lg-muted: #5B6B80;
+  --lg-line: #DDE4EC;
+  --lg-surface: #FFFFFF;
+}
+body.quarto-dark {
+  --lg-muted: #A9B6C6;
+  --lg-line: #24344D;
+  --lg-surface: #13223A;
+}
+
+/* ---------- Home hero ---------- */
+.hero { padding: 3.5rem 0 2rem; }
+.hero h1 {
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  line-height: 0.98;
+  margin: 0 0 1.25rem;
+  max-width: 14ch;
+}
+.hero .lede { font-size: 1.2rem; max-width: 60ch; color: var(--lg-muted); }
+.hero .actions { margin-top: 1.5rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+.hero .actions .btn { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; padding: .6rem 1.1rem; }
+
+/* ---------- The genome band: 1,000 genomes drawn as one chromosome ---------- */
+.band-wrap { margin: 2.5rem 0 1rem; }
+.band-caption { font-family: "Bricolage Grotesque", sans-serif; font-size: .95rem; color: var(--lg-muted); margin-bottom: .6rem; }
+.band {
+  display: flex;
+  height: 58px;
+  border-radius: 29px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+  position: relative;
+}
+/* centromere pinch, placed at ~38% like a submetacentric chromosome */
+.band::before, .band::after {
+  content: ""; position: absolute; left: 38%; width: 22px; height: 16px;
+  transform: translateX(-50%); background: var(--bs-body-bg); z-index: 2;
+}
+.band::before { top: 0; border-radius: 0 0 50% 50%; }
+.band::after { bottom: 0; border-radius: 50% 50% 0 0; }
+.seg { height: 100%; transform-origin: left; }
+@media (prefers-reduced-motion: no-preference) {
+  .band .seg { animation: grow .9s cubic-bezier(.2,.7,.2,1) both; }
+  .band .seg:nth-child(2){animation-delay:.05s}.band .seg:nth-child(3){animation-delay:.1s}
+  .band .seg:nth-child(4){animation-delay:.15s}.band .seg:nth-child(5){animation-delay:.2s}
+  .band .seg:nth-child(6){animation-delay:.25s}.band .seg:nth-child(7){animation-delay:.3s}
+  .band .seg:nth-child(8){animation-delay:.35s}.band .seg:nth-child(9){animation-delay:.4s}
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
+.band-key { display: flex; flex-wrap: wrap; gap: .35rem 1.2rem; margin-top: .8rem; font-size: .9rem; }
+.band-key span::before {
+  content: ""; display: inline-block; width: .8em; height: .8em; border-radius: 2px;
+  margin-right: .4em; vertical-align: -0.05em; background: var(--k);
+}
+.band-key b { font-family: "Bricolage Grotesque", sans-serif; }
+
+/* ---------- Maps → Mechanisms → Medicine (a real sequence, so it is drawn as one) ---------- */
+.m2m { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 1.5rem 0 0; }
+.m2m .stage { padding: 1.25rem 1.5rem 1.25rem 0; border-top: 3px solid var(--bs-primary); position: relative; }
+.m2m .stage + .stage { padding-left: 1.5rem; }
+.m2m .stage::after {
+  content: ""; position: absolute; top: -9px; right: -1px; width: 15px; height: 15px;
+  border-top: 3px solid var(--bs-primary); border-right: 3px solid var(--bs-primary);
+  transform: rotate(45deg); background: var(--bs-body-bg);
+}
+.m2m .stage:last-child::after { display: none; }
+.m2m h3 { margin: .2rem 0 .4rem; font-size: 1.45rem; }
+.m2m .aim { font-family: "Bricolage Grotesque", sans-serif; font-size: .9rem; color: var(--lg-muted); }
+.m2m p { font-size: .98rem; }
+.m2m a.more { font-family: "Bricolage Grotesque", sans-serif; font-weight: 600; font-size: .95rem; }
+.foundation {
+  margin-top: .5rem; padding: 1rem 1.25rem; background: var(--lg-surface);
+  border: 1px solid var(--lg-line); border-left: 6px solid var(--bs-warning); border-radius: 6px;
+}
+.foundation h3 { font-size: 1.15rem; margin: 0 0 .3rem; }
+.foundation p { margin: 0; font-size: .98rem; }
+@media (max-width: 768px) {
+  .m2m { grid-template-columns: 1fr; }
+  .m2m .stage, .m2m .stage + .stage { padding: 1rem 0; }
+  .m2m .stage::after { display: none; }
+}
+
+/* ---------- Facts row (plain, typographic) ---------- */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+.facts div { border-left: 2px solid var(--lg-line); padding-left: .9rem; }
+.facts strong { display: block; font-family: "Bricolage Grotesque", sans-serif; font-size: 1.9rem; line-height: 1.1; }
+.facts span { font-size: .92rem; color: var(--lg-muted); }
+
+/* ---------- Team ---------- */
+.team-country { border-left: 6px solid var(--k); padding: .25rem 0 .25rem 1rem; margin: 1.5rem 0; }
+.team-country h3 { margin: 0 0 .3rem; font-size: 1.2rem; }
+.team-country p { margin: 0; }
+
+/* ---------- Misc ---------- */
+.dot { display: inline-block; width: .7em; height: .7em; border-radius: 50%; background: var(--k); margin-right: .35em; }
+.ojs-scroll { overflow-x: auto; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--bs-warning); outline-offset: 2px; }

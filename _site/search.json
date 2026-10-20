@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Data",
+    "section": "",
+    "text": "ImportantThe data portal is not live yet\n\n\n\nPangenome graphs and the SV-eQTL database will be released here as they pass quality control. Follow the news for release announcements.\nData from the project goes to three places, depending on what it is and how identifiable it is.\nflowchart LR\n  subgraph Data\n    A[LatinPangenome graph]\n    B[SV-eQTL and SNP-eQTL database]\n    C[Single-cell gene counts]\n    D[Individual-level genomes]\n  end\n  subgraph Host\n    P[LatinGenomes web portal]\n    Z[CZ CELLxGENE]\n    E[European Genome-phenome Archive]\n  end\n  U[Your computer]\n  A --&gt; P\n  B --&gt; P\n  C --&gt; Z\n  D --&gt; E\n  P -- open --&gt; U\n  Z -- open --&gt; U\n  E -- approved by the DAC --&gt; U\n\n\n Data sharing strategy. Summary-level resources are public; individual-level sequences are available through controlled access."
+  },
+  {
+    "objectID": "data.html#open-resources",
+    "href": "data.html#open-resources",
+    "title": "Data",
+    "section": "Open resources",
+    "text": "Open resources\nLatinPangenome graph and SV catalog. Graph files and variant calls, downloadable from this site with documentation and versioning.\neQTL database. Browsable and downloadable associations for structural variants and SNPs across 29 cell types.\nSingle-cell expression. Gene count matrices through CZ CELLxGENE, maintained by the Chan Zuckerberg Initiative."
+  },
+  {
+    "objectID": "data.html#controlled-access",
+    "href": "data.html#controlled-access",
+    "title": "Data",
+    "section": "Controlled access",
+    "text": "Controlled access\nIndividual-level whole-genome sequences will be deposited in the European Genome-phenome Archive. Researchers apply through EGA, and requests are reviewed by a Data Access Committee of LatinGenomes researchers. The committee’s role is to make sure uses are consistent with the consent participants gave and with the expectations of their communities."
+  },
+  {
+    "objectID": "data.html#how-to-cite",
+    "href": "data.html#how-to-cite",
+    "title": "Data",
+    "section": "How to cite",
+    "text": "How to cite\n\nUntil the flagship paper is published, please cite the resource as:\n\nLatinGenomes Consortium. LatinPangenome: a Latin American pangenome reference. https://latingenomes.org"
+  },
+  {
+    "objectID": "news/posts/2026-09-welcome/index.html",
+    "href": "news/posts/2026-09-welcome/index.html",
+    "title": "LatinGenomes launches its website",
+    "section": "",
+    "text": "This site will host project updates, workshop announcements and, as they are released, the LatinPangenome graphs and the structural variant eQTL database.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "team.html",
+    "href": "team.html",
+    "title": "Team",
+    "section": "",
+    "text": "The Latin Pangenomes Project brings together more than 30 researchers leading genomic projects across Latin America."
+  },
+  {
+    "objectID": "team.html#partners",
+    "href": "team.html#partners",
+    "title": "Team",
+    "section": "Partners",
+    "text": "Partners\nPacBio (long-read sequencing), LatinCells, funded by the Chan Zuckerberg Initiative (single-cell profiling), and CABANAnet (training)"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "The human reference genome was assembled from very few people, so a large share of human variation is still missing from it. The Telomere-to-Telomere consortium and the Human Pangenome Reference Consortium have shown what long reads can recover, but many ancestries remain unrepresented, including every Indigenous American population. LatinGenomes brings together existing, consented DNA collections from across the region to close that gap.\nThe program builds on resources already being generated at no cost to this grant: long-read sequencing funded by PacBio, and single-cell RNA profiles of 500+ PBMC samples and healthy gallbladder tissue from the CZI-funded LatinCells project."
+  },
+  {
+    "objectID": "research.html#maps",
+    "href": "research.html#maps",
+    "title": "Research",
+    "section": "Aim 1: A Latin American pangenome",
+    "text": "Aim 1: A Latin American pangenome\nWe will select 1,000 reference samples representing the major ancestral components of the Americas, prioritizing individuals with the highest proportions of Indigenous ancestry based on existing SNP-array data. Each will be sequenced with PacBio HiFi at 30× coverage.\nEvery genome gets a de novo assembly, avoiding reference bias. Assemblies are error-corrected, aligned in a multiple whole-genome alignment, and represented as a graph, from which structural variants (deletions, duplications, inversions, insertions and translocations) are called with tools such as the vg toolkit. Variants are annotated against known SV databases, compared with the current reference, and compared between Indigenous ancestries within the region.\nOutputs: the LatinPangenome graph, a catalog of structural variants segregating in Latin America, and a better reference for mapping WGS data from Latin American populations anywhere.\n\n\n\nAncestry-specific allele frequencies for 58 pharmacogenomic SNPs with strong PharmGKB evidence, Indigenous versus European ancestry, Mexican Biobank. Distance from the diagonal shows enrichment toward one ancestry."
+  },
+  {
+    "objectID": "research.html#mechanisms",
+    "href": "research.html#mechanisms",
+    "title": "Research",
+    "section": "Aim 2: How structural variants shape gene expression",
+    "text": "Aim 2: How structural variants shape gene expression\nStructural variants appear to have outsized effects on gene expression, yet SV-eQTL studies so far rely on short reads, bulk tissue and mostly European cohorts. Only 17% of GTEx v8 individuals are of non-European or admixed ancestry.\nWe will combine high-confidence SVs from 520+ long-read genomes with single-cell RNA from the same individuals, spanning 10 Indigenous communities in 6 countries plus admixed populations. Using 29 cell types (20 immune, 9 gallbladder), we will:\n\nmap cis-eQTLs jointly for SNVs, indels and SVs (MAF ≥ 0.05) with a permutation-based approach, controlling for population structure;\nfine-map causal variants within 1 Mb windows with CAVIAR and measure the share of eQTLs led by an SV;\nmeta-analyze SV-eQTL activity across cell types to find cell-type-specific effects at the resolution of T, B and NK subtypes.\n\n\n\n\nPreliminary LatinCells data. (A) Integrated UMAP of Mexican and Colombian PBMCs annotated to cell subtypes. (B) Cells colored by donor, pooled in the same run and demultiplexed by SNPs. (C) Differentially expressed genes between Mexican and Colombian Indigenous donors by cell subtype, highest in CD4 TCM3 and CD14 monocytes."
+  },
+  {
+    "objectID": "research.html#medicine",
+    "href": "research.html#medicine",
+    "title": "Research",
+    "section": "Aim 3: Gallbladder cancer in Mapuche ancestry",
+    "text": "Aim 3: Gallbladder cancer in Mapuche ancestry\nChile reports the highest gallbladder cancer incidence worldwide, and its Mapuche population is the most affected, particularly women. Each 1% increase in Mapuche ancestry among admixed Chileans has been associated with a 3.7% increase in gallbladder cancer mortality risk.\n\n\nGermline SVs. We will map SV-eQTLs in 122 individuals (77 healthy donors from Aim 2 and 45 newly recruited cases), identify eGenes differentially expressed in tumor cell types, and test colocalization with published gallbladder cancer GWAS signals.\nSomatic SVs at single-cell resolution. Strand-seq with scNOVA on 1,000 tumor cells from 10 Mapuche patients will catalog deletions, inversions, duplications and chromothripsis, and infer their effect on expression from nucleosome occupancy. Optical genome mapping of bulk tumor DNA from 45 patients will add smaller SVs that Strand-seq cannot resolve.\n\n\n\n\nMapuche ancestry (left) and gallbladder cancer mortality (right) across Chile. From Lorenzo Bermejo et al. 2017."
+  },
+  {
+    "objectID": "research.html#capacity",
+    "href": "research.html#capacity",
+    "title": "Research",
+    "section": "Aim 4: Local capacity",
+    "text": "Aim 4: Local capacity\nHelicopter research, thin infrastructure and short funding cycles have held back large-scale genomics in Latin America. This team is entirely Latin American, and the work is distributed so that capacity stays in the region: sequencing and SV discovery across the Broad Institute, Mexico and Uruguay; pangenome curation and storage in Uruguay; single-cell integration in Mexico; patient recruitment and gallbladder profiling in Chile."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A pangenome for Latin America",
+    "section": "",
+    "text": "We are sequencing 1,000 long-read genomes from Indigenous and admixed ancestries across Latin America to find the structural variation that reference misses, and to learn what it does in immune cells and in gallbladder cancer.\ncohorts = FileAttachment(\"data/cohorts.csv\").csv({typed: true})\nplaces = FileAttachment(\"data/countries.csv\").csv({typed: true})\ntopojson = require(\"topojson-client@3\")\nworld = d3.json(\"https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json\")\nland = topojson.feature(world, world.objects.countries)\npartnerColor = new Map(places.map(d =&gt; [d.atlas_name, d.color]))\ndark = document.body.classList.contains(\"quarto-dark\")\ntotals = places.map(p =&gt; {\n  const rows = cohorts.filter(d =&gt; d.country === p.country)\n  return {...p, value: d3.sum(rows, d =&gt; d.lr_wgs ?? 0), n: rows.length}\n}).filter(d =&gt; d.value &gt; 0)\n\nPlot.plot({\n  width: Math.min(width, 760),\n  height: Math.min(width, 760) * 1.05,\n  projection: {\n    type: \"mercator\",\n    domain: {type: \"MultiPoint\", coordinates: [[-112, 30], [-36, -55]]},\n    inset: 8\n  },\n  r: {range: [0, 34], domain: [0, 220]},\n  marks: [\n    Plot.geo(land, {fill: dark ? \"#1E2D45\" : \"#E4E9EF\", stroke: dark ? \"#0E1A2E\" : \"#FFFFFF\", strokeWidth: 0.6}),\n    Plot.geo(land.features.filter(f =&gt; partnerColor.has(f.properties.name)), {\n      fill: f =&gt; partnerColor.get(f.properties.name), fillOpacity: 0.4,\n      stroke: dark ? \"#0E1A2E\" : \"#FFFFFF\", strokeWidth: 0.6\n    }),\n    Plot.dot(totals, {\n      x: \"lon\", y: \"lat\", r: \"value\",\n      fill: \"color\", stroke: dark ? \"#E6ECF3\" : \"#14233C\", strokeWidth: 1.2,\n      title: d =&gt; `${d.country}\\n${d.n} contributing cohort${d.n &gt; 1 ? \"s\" : \"\"}`\n    }),\n    Plot.text(totals, {\n      // label sits just right of each circle, so bigger circles push it further out\n      x: d =&gt; d.lon + 0.8 + 3.6 * Math.sqrt(d.value / 220), y: \"lat\",\n      text: \"country\", textAnchor: \"start\",\n      fill: \"currentColor\", fontSize: 12, fontWeight: 600,\n      stroke: dark ? \"#0E1A2E\" : \"#F7F9FB\", strokeWidth: 3, paintOrder: \"stroke\"\n    })\n  ]\n})\nCountries contributing long-read genomes to the LatinPangenome. Positions mark the country, not a specific community."
+  },
+  {
+    "objectID": "index.html#from-maps-to-medicine",
+    "href": "index.html#from-maps-to-medicine",
+    "title": "A pangenome for Latin America",
+    "section": "From maps to medicine",
+    "text": "From maps to medicine\n\n  \n    Aim 1\n    Maps\n    Build a graph-based Latin American pangenome from 1,000 PacBio HiFi genomes at 30× and catalog the structural variants absent from the current reference.\n    About the pangenome\n  \n  \n    Aim 2\n    Mechanisms\n    Map how structural variants change gene expression in 29 cell types, using single-cell RNA from 520 of the same people.\n    About SV-eQTL mapping\n  \n  \n    Aim 3\n    Medicine\n    Study germline and somatic structural variants in gallbladder cancer among Chilean patients of Mapuche ancestry, the population with the highest burden worldwide.\n    About the gallbladder study\n  \n\n\n  Aim 4: Local capacity, local leadership\n  Sequencing, analysis and data stewardship happen in Latin America, with yearly hands-on workshops run with CABANAnet."
+  },
+  {
+    "objectID": "index.html#why-this-matters",
+    "href": "index.html#why-this-matters",
+    "title": "A pangenome for Latin America",
+    "section": "Why this matters",
+    "text": "Why this matters\nPopulations of the Americas carry alleles found nowhere else, some with clear medical consequences. Yet the Human Pangenome Reference Consortium currently includes no reference population of Indigenous American ancestry, and Latin American populations are strongly substructured. Without a regional reference, the variation that drives health differences across the region stays invisible.\n\n\n\nAncestry-specific PCA of the Indigenous fraction of Latin American genomes. Indigenous components (green) and admixed populations (colored) occupy distinct, sometimes non-overlapping ranges. Data from Homburger, Moreno-Estrada et al. 2015, PLOS Genetics."
+  },
+  {
+    "objectID": "index.html#latest-news",
+    "href": "index.html#latest-news",
+    "title": "A pangenome for Latin America",
+    "section": "Latest news",
+    "text": "Latest news\n\n\n\n\n\nLatinGenomes launches its website\n\n\nA home for the Latin American pangenome, cohort information, and upcoming data releases.\n\n\n\n\n\nSep 25, 2026\n\n\n\n\n\nNo matching items\n\nAll news and updates"
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
+    "section": "",
+    "text": "LatinGenomes launches its website\n\n\n\nannouncements\n\n\n\nA home for the Latin American pangenome, cohort information, and upcoming data releases.\n\n\n\n\n\nSep 25, 2026\n\n\n\n\n\nNo matching items\n Back to top"
+  }
+]
