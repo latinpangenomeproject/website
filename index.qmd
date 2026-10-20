@@ -14,7 +14,7 @@ listing:
 ::: {.hero}
 # A pangenome for Latin America
 
-[We are sequencing 1,000 long-read genomes from Indigenous and admixed ancestries across Latin America to find the structural variation that reference misses, and to learn what it does in immune cells and in gallbladder cancer.]{.lede}
+[We are sequencing 1,000 long-read genomes from Indigenous and admixed ancestries across Latin America to find the structural variation that the current human reference genome misses, and to learn what it does in immune cells and in gallbladder cancer.]{.lede}
 :::
 
 ```{ojs}
